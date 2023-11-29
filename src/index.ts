@@ -13,12 +13,12 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
         },
     ];
 
-    const rest = new REST({ version: "10" }).setToken(TOKEN);
+    const rest = new REST({ version: "10" }).setToken(process.env.BOT_TOKEN!);
 
     try {
         console.log("[SLASH COMMANDS] REFRESHING COMMANDS");
 
-        await rest.put(Routes.applicationCommands(CLIENT_ID), { body: commands });
+        await rest.put(Routes.applicationCommands(process.env.CLIENT_ID!), { body: commands });
 
         console.log("[SLASH COMMANDS] FINISHED SUCESSFULLY");
     } catch (error) {
@@ -38,5 +38,5 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
         console.log(`Bot is Online! [${client.user!.tag}]`);
     });
 
-    client.login(TOKEN);
+    client.login(process.env.BOT_TOKEN!);
 })();
