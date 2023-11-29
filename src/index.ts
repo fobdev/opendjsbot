@@ -1,8 +1,6 @@
 import { REST, Routes } from "discord.js";
 import { Client, GatewayIntentBits } from "discord.js";
 
-const TOKEN = "MTE3OTQ5MTQwMjM1MTEyNDYwMg.GdraoD.lWDCWpmvwzSdTGpQ2gVpcPjMZxxYTidxKkcuCg";
-const CLIENT_ID = "1179491402351124602";
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 (async () => {
