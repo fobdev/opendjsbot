@@ -1,0 +1,22 @@
+{
+    "name": "opendjsbot",
+    "version": "1.0.0",
+    "description": "automation discord bot",
+    "main": "index.js",
+    "repository": "https://github.com/fobdev/opendjsbot.git",
+    "author": "fob",
+    "license": "MIT",
+    "dependencies": {
+        "discord.js": "^14.14.1"
+    },
+    "devDependencies": {
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.3.2",
+        "dotenv": "^16.3.1"
+    },
+    "scripts": {
+        "build": "tsc",
+        "dev": "ts-node-dev -r dotenv/config src/index.ts",
+        "start": "node prod/index.js"
+    }
+}
